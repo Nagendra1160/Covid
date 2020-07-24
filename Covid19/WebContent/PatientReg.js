@@ -38,7 +38,7 @@
         };
     })();
     
-    var required = $('form').find('[data-required]');
+    var required = $('form').find('[required]');
     var numbers = $('form').find('[data-number]');
     var emails = $('form').find('[data-email]');
     var once = $('form').find('[data-once]');

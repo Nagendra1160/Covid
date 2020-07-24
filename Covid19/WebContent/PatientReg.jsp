@@ -26,15 +26,15 @@
     <main>
       <form method="post" action="PatientGetDetails.jsp">
         <div class="form-item box-item">
-          <input type="number" name="SampleNo" class="tx1" placeholder="Sample No" data-required>
+          <input type="number" name="SampleNo" class="tx1" placeholder="Sample No" required data-required>
           <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> required field</small>
         </div>
         <div class="form-item box-item">
-          <input type="text" name="name" class="tx1" placeholder="Name" data-required>
+          <input type="text" name="name" class="tx1" placeholder="Name" required data-required>
           <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> required field</small>
         </div>
         <div class="form-item box-item">
-          <input type="number" name="age" class="tx1" placeholder="Age" data-required>
+          <input type="number" name="age" class="tx1" placeholder="Age" required data-required>
           <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> required field</small>
         </div>
         
@@ -44,7 +44,7 @@
               <label class="label">Gender</label>
             </div>
             <div class="form-item"> 
-              <input id="Male" type="radio" name="gender" value="M" data-once>
+              <input id="Male" type="radio" name="gender" value="M" data-once required>
               <label for="Male">Male</label>
             </div>
             <div class="form-item"> 
@@ -56,30 +56,30 @@
         </div>
         
         <div class="form-item box-item">
-          <input type="email" name="email" class="tx1" placeholder="Email" data-email data-required>
+          <input type="email" name="email" class="tx1" placeholder="Email" data-email required>
           <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> required field</small>
           <small class="errorEmail"><i class="fa fa-asterisk" aria-hidden="true"></i> email is not valid</small>
         </div>
        
        <div class="form-item box-item">
-          <input type="text" name="phone" placeholder="Phone" data-required data-number data-count="10">
+          <input type="text" name="phone" placeholder="Phone" required data-number data-count="10" maxlength="10">
           <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> required field</small>
           <small class="errorNum"><i class="fa fa-asterisk" aria-hidden="true"></i> must be a number</small>
           <small class="errorChar"><i class="fa fa-asterisk" aria-hidden="true"></i> must be 10 digits</small>
         </div>
       
          <div class="form-item box-item">
-          <input type="text"  name="city" class="tx1" placeholder="Enter city" data-required>
+          <input type="text"  name="city" class="tx1" placeholder="Enter city" required data-required>
           <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> required field</small>
         </div>
         
          <div class="form-item box-item">
-          <input type="number" name="PIN" class="tx1" placeholder="PIN Code" data-required>
+          <input type="number" name="PIN" class="tx1" placeholder="PIN Code" required data-required>
           <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> required field</small>
         </div>
         
          <div class="form-item box-item">
-          <input type="password" name="pass" class="tx1" placeholder="Create Password" data-required>
+          <input type="password" name="pass" class="tx1" placeholder="Create Password" required data-required>
           <small class="errorReq"><i class="fa fa-asterisk" aria-hidden="true"></i> required field</small>
           
         </div>

@@ -105,11 +105,12 @@ else
 	 }
  }
    out.println(p1+" "+p2+" "+p3);
+   
 }
 else
 out.println("please check");
 
 %>
-<button><a href="Welcome.html"></a></button>
+<button><a href="Welcome.html">Home</a></button>
 </body>
 </html>

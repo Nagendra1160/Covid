@@ -67,6 +67,55 @@ public class EmailUtility {
 
 	    
 	}
+	
+	//To Send an email to Alert the doctor
+	public static  void send(String rec,String content,String details) throws UnsupportedEncodingException
+	{
+		    Properties properties = System.getProperties();
+		    properties.put("mail.smtp.host", host);
+	        properties.put("mail.smtp.port", port);
+	        properties.put("mail.smtp.ssl.enable", "true");
+	        properties.put("mail.smtp.auth", "true");
+		 
+	        
+	        Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
+
+	            protected PasswordAuthentication getPasswordAuthentication() {
+
+	                return new PasswordAuthentication(from, "Nagendra$1156");
+
+	            }
+
+	        });
+	        
+	        session.setDebug(true);
+           
+	        try {
+	            // Create a default MimeMessage object.
+	            MimeMessage message = new MimeMessage(session);
+
+	            // Set From: header field of the header.
+	            message.setFrom(new InternetAddress(from,"Nagendra"));
+
+	            // Set To: header field of the header.
+	            message.addRecipient(Message.RecipientType.TO, new InternetAddress(rec));
+
+	            // Set Subject: header field
+	            message.setSubject("Alert Message");
+
+	            // Now set the actual message
+	            message.setText(content);
+                message.setText(details);
+	            System.out.println("sending...");
+	            // Send message
+	            Transport.send(message);
+	            System.out.println("Sent message successfully....");
+	        } catch (MessagingException mex) {
+	            mex.printStackTrace();
+	        }
+
+	    
+	}
 	public static void main(String[] args)
 	{}
 }
