@@ -46,7 +46,7 @@ public class EmailUtility {
 	            MimeMessage message = new MimeMessage(session);
 
 	            // Set From: header field of the header.
-	            message.setFrom(new InternetAddress(from,"Nagendra"));
+	            message.setFrom(new InternetAddress(from,"Covid-19"));
 
 	            // Set To: header field of the header.
 	            message.addRecipient(Message.RecipientType.TO, new InternetAddress(rec));
@@ -55,7 +55,7 @@ public class EmailUtility {
 	            message.setSubject("Account Authentication");
 
 	            // Now set the actual message
-	            message.setText(content);
+	            message.setText("Your OTP is "+content);
 
 	            System.out.println("sending...");
 	            // Send message
@@ -95,7 +95,7 @@ public class EmailUtility {
 	            MimeMessage message = new MimeMessage(session);
 
 	            // Set From: header field of the header.
-	            message.setFrom(new InternetAddress(from,"Nagendra"));
+	            message.setFrom(new InternetAddress(from,"Covid-19"));
 
 	            // Set To: header field of the header.
 	            message.addRecipient(Message.RecipientType.TO, new InternetAddress(rec));

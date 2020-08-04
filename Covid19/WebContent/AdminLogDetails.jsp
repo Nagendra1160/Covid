@@ -9,35 +9,32 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
-  String email=request.getParameter("nam");
+<% 
+String email=request.getParameter("ema");
   String pass=request.getParameter("pas");
   String k="";
   int id=0;
-  try{
   Connection con=DBConnection.connect();
-  PreparedStatement pst=con.prepareStatement("select * from patients where email=? and password=?");
+  PreparedStatement pst=con.prepareStatement("select * from Admin where email=? and password=?");
   pst.setString(1,email);
   pst.setString(2,pass);
   ResultSet rs=pst.executeQuery();
   if(rs.next())
   {
-	id=rs.getInt(1); 
+	id=1; 
   }
-  }
-  catch(Exception e){}
   if(id!=0)
   {
 	  session.setAttribute("email", email);
 	  session.setAttribute("pass",pass);
-	  session.setAttribute("sam",id);
-	  response.sendRedirect("PatientDashboard.jsp");
+	 
+	  response.sendRedirect("AdminDashboard.jsp");
 	  
   }
   else
   {
 	  request.setAttribute("errmessage", "You are not authorized person");
-      request.getRequestDispatcher("/PatientLog.jsp").forward(request,response);
+      request.getRequestDispatcher("/AdminLogin.jsp").forward(request,response);
   }
 
 %>

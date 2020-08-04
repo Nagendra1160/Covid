@@ -10,6 +10,9 @@
 <title>Insert title here</title>
 </head>
 <body><% 
+String msgOk="";
+String reg="";
+String nreg="";
  Connection con=DBConnection.connect();
  Statement st=con.createStatement();
  ResultSet rs=st.executeQuery("select id from doctors where temp=1");
@@ -19,9 +22,9 @@
  out.println(id);
  
 String otpfromuser=request.getParameter("otp");
-out.println("The otp from user "+otpfromuser);
+//out.println("The otp from user "+otpfromuser);
 String otp=(String)session.getAttribute("otp");
-out.println("The otp from machine "+otp);
+//out.println("The otp from machine "+otp);
 
 
 int sample=Integer.valueOf((String)session.getAttribute("sam"));
@@ -104,13 +107,31 @@ else
 		 System.out.println(e1);
 	 }
  }
-   out.println(p1+" "+p2+" "+p3);
-   
+//   out.println(p1+" "+p2+" "+p3);
+if(p1==1 && p2==1 && p3==1)
+{
+	reg="You have successfully registered Please Login";
+
+   request.setAttribute("reg",reg);
+	 request.getRequestDispatcher("/PatientReg.jsp").forward(request,response);
+
 }
+
+else{
+	nreg="You have not registered Please try again";
+			request.setAttribute("nreg",nreg);
+			 request.getRequestDispatcher("/PatientReg.jsp").forward(request,response);
+
+}
+}	
 else
-out.println("please check");
+{
+	msgOk="Please Check again";
+	request.setAttribute("msgOk", msgOk);
+	 request.getRequestDispatcher("/OtpEnter.jsp").forward(request,response);
+}
 
 %>
-<button><a href="Welcome.html">Home</a></button>
+
 </body>
 </html>

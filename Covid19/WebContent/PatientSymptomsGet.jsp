@@ -113,7 +113,7 @@
 	  }
 	  patient_condition="Your condition is getting worse ,Please contact Your doctor immediately ";
 	  request.setAttribute("msg!Ok", patient_condition);
-	  request.getRequestDispatcher("/Patientashboard.jsp").forward(request,response);
+	  request.getRequestDispatcher("/PatientDashboard.jsp").forward(request,response);
 	  //out.println("Email send successfully ");
 	  //out.println("Your condition getting worse contact your doctor ");
   }
