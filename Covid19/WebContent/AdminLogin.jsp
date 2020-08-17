@@ -72,6 +72,7 @@ function validate()
 
 </div>
 </div>
+<%session.setAttribute("Admin","admin"); %>
 <style>
 .main
 {   

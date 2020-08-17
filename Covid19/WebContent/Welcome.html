@@ -5,84 +5,303 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <title>Insert title here</title>
 
   </head>
 <body>
+<nav class="navbar navbar-inverse">
 <div class="container-fluid main">
-<div class="row">
-  <div class="col-md-2 "><img src="Images/virus.png" width="45px" height="45px" style="float:left;"><Strong>Covid Patient Monitoring System</Strong></div>
-  <div class="col-md-1 ic"> <a href="#home">About</a></div>
-  <div class="col-md-2 ic"><a href="#ne">Things To Do</a></div>
-  <div class="col-md-2 ic"> <a href="ICMRGuidelines.jsp">ICMR Guidelines</a></div>
-  <div class="col-md-2 ic"> <a href="#home">Covid FAQS</a></div>
-  <div class="col-md-1">
-	  <div class="dropdown dp">
-	  
-	  <button class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
-    LOGIN
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="PatientLog.jsp">User</a>
-    <a class="dropdown-item" href="AdminLogin.jsp">Admin</a>
+     <div class="navbar-header">
+       <img src="Images/virus.png" width="45px" height="45px" style="float:left;">
+       <h4 style="color:white;"><Strong>Covid Patient Monitoring System</Strong></h2>
+     </div>
+     
+     <ul class="nav navbar-nav">
+           <li id="ic"><a href="#abt">About</a></li>
+           <li id="ic"><a href="#symtms">Symptoms</a></li>
+           <li id="ic"><a href="#pren">Prevention</a></li>
+           <li id="ic"><a href="ICMRGuidelines.jsp">ICMR Guidelines</a></li>
+           <li id="ic"><a href="#faqs">Covid FAQS</a></li>
 
-  </div>
-	  </div>
-  </div>
-  <div class="col-md-1">
-	  <div class="dropdown dp">
-		   <button class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
-	    REGISTER
-	  </button>
-		  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-		    <a class="dropdown-item" href="PatientReg.jsp">User</a>
-		    <a class="dropdown-item" href="AdminRegister.jsp">Admin</a>
-		  </div>
+	  
+		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">LOGIN<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="AdminLogin.jsp">Admin</a></li>
+          <li><a href="PatientLog.jsp">User</a></li> 
+        </ul>
+      </li>
+      
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">REGISTER<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="AdminRegister.jsp">Admin</a></li>
+          <li><a href="PatientReg.jsp">User</a></li> 
+        </ul>
+      </li>
+      </ul>
       </div>
-  </div>
- 
- </div>
- <div class="bg">
+ </nav>
   
+ <div class="bg">
+  <img src="Images/covid_f3.jpg">
  </div>
 </div> 
-<script>
+<div id="abt">
+   <h2 align="center">About</h2>
+  <h3 align="center">COVID19 Patients Monitor</h3> 
+<p id="pabt">An application to monitor the COVID affected patients who has been isolated in their home and
+monitoring them remotely. The patients are undergoing treatment from their home since there was
+scarcity for the beds in the hospitals.
+The application should send live monitoring data from the monitoring devices to the doctor portal(Please
+mock the data through some easy source). i.e. If the pulse rate or blood pressure rate, body temperature
+not inline with the recommendable range should send the alert to the doctors.
+Admin Modules to manage the doctor profiles patient profiles monitored data.</p>
+</div>
 
+
+<div id="symtms">
+
+  <h2>What are the symptoms of COVID-19?</h2>
+  <div class="row rw">
+    <div class="col-md-2"><img src="Images/Fever-covid Symptoms.png"><h5 align="center">FEVER
+(Body temperature more than 100.4°F/38°C)</h5></div>
+    <div class="col-md-2"><img src="Images/Dry-Cough-covid Symptoms.png"><h5 align="center">DRY COUGH</h5></div>
+    <div class="col-md-2"><img src="Images/Breathlessness-covid Symptoms.png"><h5 align="center">BREATHLESSNESS
+(Difficulty in breathing)</h5></div>
+    <div class="col-md-2"><img src="Images/Sore-Throat-covid Symptoms.png"><h5 align="center">SORE THROAT</h5></div>
+    <div class="col-md-2"><img src="Images/Tiredness-covid Symptoms.png"><h5 align="center">TIREDNESS</h5></div>
+  </div>  
+  <p>Some patients may also experience body aches, nasal congestion, runny nose or diarrhea. Invasive pneumonic infiltrates in both lungs can be seen in Chest X-ray.
+  </p>
+  <p>Please note that above mentioned symptoms can also be common for other respiratory infections, therefore, travel history to affected geographical area is the most important diagnostic criteria for COVID-19 infection.
+  </p>
+</div>
+<div id="pren">
+   <h2 align="center">Prevention</h2>
+   <h3 align="center">Basic protective measures against the coronavirus</h3>
+   <div class="row rw">
+    <div class="col-md-2"><img src="Images/Wash-your-hands.png"><h5 align="center">Wash your hands regularly with soap and water (for at least 20 seconds), or clean them with alcohol-based hand sanitizers</h5></div>
+    <div class="col-md-2"><img src="Images/Cover-mouth.png"><h5 align="center">Cover your mouth and nose when coughing or sneezing; practice respiratory etiquette (for example, by coughing into a flexed elbow or in tissue paper; discard the used tissue paper in a closed dustbin)</h5></div>
+    <div class="col-md-2"><img src="Images/Safe-Distance.png"><h5 align="center">Maintain at least 1 meter distance between you and people coughing or sneezing (Physical distancing)</h5></div>
+    <div class="col-md-2"><img src="Images/Avoid-Touching.png"><h5 align="center">Avoid touching your face</h5></div>
+    <div class="col-md-2"><img src="Images/Wash-Hand.png"><h5 align="center">Say yes to Namaste and No to handshakes</h5></div>
+    <div class="col-md-2"><img src="Images/Stay-Home.png"><h5 align="center">Stay home if you feel unwell</h5></div>
+  </div>  
+   <p>Stay aware of the latest information on the COVID-19 outbreak, available on the WHO website and through your national and local public health authority. Most people who become infected experience mild illness and recover, but it can be more severe for others. Take care of your health and protect others by doing the following:</p>
+    <p><span class="text-strong sp">Wash your hands frequently:</span> Regularly and thoroughly clean your hands with an alcohol-based hand rub or wash them with soap and water.</p>
+    <p><span class="text-strong sp">Maintain social distancing:</span> Maintain at least 1 metre (3 feet) distance between yourself and anyone who is coughing or sneezing.</p>
+    <p><span class="text-strong sp">Avoid touching eyes, nose and mouth:</span> Why? Hands touch many surfaces and can pick up viruses. Once contaminated, hands can transfer the virus to your eyes, nose or mouth. From there, the virus can enter your body and can make you sick</p>
+    <p><span class="text-strong sp">Practice respiratory hygiene:</span> Make sure you, and the people around you, follow good respiratory hygiene. This means covering your mouth and nose with your bent elbow or tissue when you cough or sneeze. Then dispose of the used tissue immediately.</p>
+    <p><span class="text-strong sp">If you have fever, cough and difficulty breathing, seek medical care early:</span> Stay home if you feel unwell. If you have a fever, cough and difficulty breathing, seek medical attention and call in advance. Follow the directions of your local health authority.</p>
+  
+  
+</div>
+
+
+ <h2 align="center">Some Frequently asked questions</h2>
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 "id="faqs">
+
+ <h3>What is a Coronavirus?</h3>
+		<div class=panel style=max-height:358px>
+		<p>Coronaviruses are a large family of viruses which may
+		cause illness in animals or humans. In humans, several
+		coronaviruses are known to cause respiratory infections
+		ranging from the common cold to more severe diseases
+		such as Middle East Respiratory Syndrome (MERS) and
+		Severe Acute Respiratory Syndrome (SARS). The most
+		recently discovered coronavirus called as 2019 Novel
+		Coronavirus (2019-nCoV) causes coronavirus disease
+		COVID-19.</p>
+		</div>
+  <h3>What are the symptoms of COVID-19 ?</h3>
+		<div class=panel>
+		<p>The most common symptoms of COVID-19 are fever,
+		tiredness, and dry cough. Some patients may have aches
+		and pains, nasal congestion, runny nose, sore throat or
+		diarrhea. These symptoms are usually mild and begin
+		gradually. Some people become infected but don’t
+		develop any symptoms and don’t feel unwell. Most
+		people (about 80%) recover from the disease without
+		needing special treatment.</p>
+		</div>
+   <h3>Who should get tested?</h3>
+		<div class=panel>
+		<p>As per guidelines, if you develop the acute onset of fever
+		and symptoms of respiratory illness, such as cough or
+		shortness of breath you should visit your nearest health
+		facility and the doctor will decide if you need to be tested
+		for COVID-19, depending upon your history of travel to
+		affected countries or contact with any suspects.</p>
+		</div>
+   <h3>What are the documents needed for (COVID -19) Testing?</h3>
+		<div class=panel>
+		<p>Patient Information Form (Patient Proforma, to be
+		provided by SRL Lab personnel) duly filled, along with the
+		referring doctor’s prescription, also Govt. photo-id
+		(Aadhaar card/ VoterId/ Passport) to support the current
+		address and contact number of the suspect patient to be
+		provided at the time of sample collection. These are
+		mandatory requirements defined by Govt. of India
+		without which testing of COVID 19 is not allowed.</p>
+		</div>
+   <h3>How long does the virus survive on surfaces ?</h3>
+		<div class=panel>
+		<p>It is not yet clear that how long the COVID-19 survives on surfaces, however, it seems to act like other coronaviruses. Preliminary information on the COVID-19 virus have suggested that it may persist on surfaces for few hours to several days. Though it can vary under different environmental conditions such as type of surface, temperature or the humidity. Surface cleaning should be done with simple disinfectant to kill the virus. Clean your hands with an alcohol-based hand rub or wash them with soap and water. Avoid touching your mouth, eyes or nose.
+		</p>
+		</div>
+   <h3>What kind of Sample is needed for Testing ?</h3>
+		<div class=panel>
+		<p>Nasopharyngeal and Oropharyngeal swab will be
+		collected by taking due precautions</p>
+		</div>
+  </div>
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 faqAccordian">
+  <h3>What Methodology is being used for testing?</h3>
+		<div class=panel>
+		<p>RT PCR, as recommended by ICMR.</p>
+		</div>
+<h3>What's the sample collection and transportation process ?</h3>
+		<div class=panel>
+		<p>The sample will be collected in a viral transport medium
+		(VTM) to maintain the stability of the sample & get
+		transported in a cold chain. Our specially trained
+		phlebotomists collect the samples by following all
+		biosafety precautions and using personal protective
+		equipment.</p>
+		</div>
+  <h3>By when can I get my report?</h3>
+		<div class=panel>
+		<p>We will share all patients’ reports with defined Govt.
+		bodies as per the guidelines of Govt of India/ICMR.We will
+		upload your report on our website www.srlworld.com
+		and mobile app, subject to govt rules and regulations. You
+		can access your report from Website /Mob App using
+		login id and password provided.</p>
+		</div>
+  <h3>How long will it take to get my report?</h3>
+		<div class=panel>
+		<p>24 hours after you provide your sample at lab.</p>
+		</div>
+  <h3>What is the Price of COVID 19 Test ?</h3>
+		<div class=panel>
+		<p>Rs 4500</p>
+		</div>
+  <h3>How do I interpret my report ?</h3>
+		<div class=panel>
+		<p>You are advised to visit your referring doctor/hospital
+		with the report for further advice.</p>
+		</div>
+  
+   <h3>Can I catch COVID-19 from my pet?</h3>
+		<div class=panel>
+		  There is no documented evidence that a dog, cat or any pet can transmit COVID-19. As stated, COVID-19 can mainly spread through droplets breathed out (blow out) when an infected person sneezes or coughs. To protect yourself, wash your hands frequently and properly.
+		</div>
+
+
+
+   <h3>Who is at risk of developing severe illness ?</h3>
+		<div class=panel>
+		  COVID-19 can affect anyone, but older people and individuals with underlying medical conditions (such as diabetes, lung diseases, high blood pressure, heart disease or malignancy) appear to develop serious illness more in comparison to others.
+		
+		</div>
+    </div>
+<script>
 
 </script>
 <style>
 .main
 {
-background-color: #878A93;
+background-color:black;
 }
-.ic
+#ic
 {
-  font-size:24px;
+  font-size:14px;
   text-decoration:none;
 }
+
+
 a:hover
 {
 text-decoration: none;
-  color:black;
+ color:blue;
 }
 .dp
 {
  margin:5%;
 }
-body
+.bg
 {
-  background-image:url('Images/covid.v1.jpg');
   background-color:#878A93;
- 
+  margin-left:-4%;
+   margin-top:-4%;
+  
 }
 
-</style>
- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+#abt
+{
+ background-color:#D2F3F7;
+}
+#pabt
+{
+ margin:0% 10% 10% 10%;
+ font-size:18px;
+ text-align: justify;
+  text-justify: inter-word;
+}
+#pren p
+{
+ margin-right:10%;
+ margin-left:10%;
+ margin-top:2%;
+ font-size:18px;
+ text-align: justify;
+  text-justify: inter-word;
+  
+}
+#pren h3
+{
+  margin:0% 10% 0% 10%;
+}
+#pren
+{
+ background-color:#D2F3F7;
+}
+.sp
+{
+  color:blue;
+}
 
+li {
+    margin-right: 40px;
+   
+}
+body
+{
+  overflow-x:hidden;
+}
+#symtms
+{
+ margin:10%;
+}
+#symtms p
+{
+ font-size:18px;
+}
+.rw
+{
+margin:2%;
+}
+
+.panel
+{
+ text-align: justify;
+  text-justify: inter-word;
+ 
+}
+</style>
+ 
 
 </body>
 </html>

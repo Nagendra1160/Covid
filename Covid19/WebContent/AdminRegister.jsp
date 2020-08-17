@@ -170,12 +170,15 @@ function startApp() {
         </div>
         <hr>
 <form action="AdminGetDetails.jsp" method="post">
-<table align="center">
+<table align="center"  class="input2">   
+
 <tr><td><input type ="text" name="nam" placeholder="first name & last name"></td><tr>
 <tr><td><input type="text" name="email" placeholder="Email"></td></tr>
 <tr><td><input type="password" name="pas"  placeholder="Password"></td></tr> 
 <tr><td><input type="submit" name="submit"></td></tr>
 
+</table>
+<table align="center">
 <tr><td>Or Connect With Google</td>
  <td> 
       <div id="signin-button"  data-width="300" data-height="200" data-longtitle="true"></div>
@@ -214,9 +217,7 @@ function startApp() {
         });
       }
 
-      /**
-       * Convenience methods for console debugging.
-       */
+      
       function signOut(){
         auth2.signOut();
       }
@@ -255,7 +256,10 @@ img
   width:40%;
 	height:50%;
 }
-
+.input2
+{
+  margin-left:30%;
+}
 .main
 {   
     border: 1px solid #000;
@@ -270,7 +274,7 @@ img
 	margin-left:25%;
 	
 }
-input[type=submit],button
+input[type=submit]
 {
 	background-color:#44c767;
 	border-radius:28px;
@@ -284,13 +288,15 @@ input[type=submit],button
 	padding:15px 20px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;
+	margin-left:40%;
 }
 
-input[type=text],[type=password],button
+input[type=text],[type=password]
 {
 	padding:12px;
 	background-color:white;
 	border-radius:18px;
+	margin-left:10%;
 }
 
 input[type=text]:focus,[type=password]:focus

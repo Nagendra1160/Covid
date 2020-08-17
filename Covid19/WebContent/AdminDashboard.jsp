@@ -12,9 +12,17 @@
 
 
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Admin Dashboard</title>
+<%
+if(session.getAttribute("Admin")==null)
+{
+	response.sendRedirect("AdminLogin.jsp");
+}
+else{
+%>
 </head>
 <body>
+
 Your are Logged in
 
 <div class="container-fluid">
@@ -55,7 +63,7 @@ Your are Logged in
 					   <h1>Monitor Data</h1>
 					 </div>
 				     <hr>
-				     <div class="t"><button>Monitor Data</button></div>
+				     <div class="t"><button>Click here</button></div>
 		    </div>
 	    </div>
 	 </div>
@@ -309,7 +317,7 @@ button,input[type=button]
 	padding:15px 20px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;
-	margin-left:25%;
+	margin-left:15%;
 	margin-bottom:5px;
 	text-decoration:none;
 	float:right;
@@ -337,6 +345,14 @@ a:hover
   postion:absolute;
   margin:10%;
   margin-left:4%;
+}
+#topbar1,#topbar2
+{
+ margin-right:23%;
+}
+.t
+{
+margin-right:23%;
 }
 </style>
  <script>
@@ -380,7 +396,7 @@ a:hover
   
   </script> 
 
-
+<%} %>
 
 </body>
 </html>

@@ -14,11 +14,19 @@
 <h1 align="center"><span style="color:green"><%=(request.getAttribute("msgOk")==null) ? "":request.getAttribute("msgOk")%></span></h1>
 <h1 align="center"><span style="color:red"><%=(request.getAttribute("msg!Ok")==null) ? "":request.getAttribute("msg!Ok")%></span></h1>
 <%
+
+//response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
+//response.setHeader("Pragma","no-cache");
+//response.setHeader("Expires","0");
+if(session.getAttribute("sam")==null)
+	response.sendRedirect("PatientLog.jsp");
+else
+{
   int sampleno=(Integer)session.getAttribute("sam");
 String Pname="",PEmail="",PMobile="",PDate="";
 String Dname="",Designation="",DEmail="",DMobile="";
-
 int doctorid=0;
+
  try{
   Connection con=DBConnection.connect();
   PreparedStatement pst=con.prepareStatement("select * from patients where sampleno=?");
@@ -48,6 +56,7 @@ int doctorid=0;
       DMobile=rs1.getString(7);
  }}
  catch(Exception e){}
+
 %>
 <body>
 <div class="container-fluid con">
@@ -306,6 +315,6 @@ body
   background-color:#E5E7E9;
 }
 </style>
-  
+<%} %>
 </body>
 </html>
